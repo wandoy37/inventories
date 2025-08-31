@@ -1,0 +1,26 @@
+.active {
+        font-weight: bold;
+        color: #6c757d !important;
+}
+
+/* Pagination */
+.pagination-custom {
+    --bs-pagination-color: #6c757d;               /* teks normal */
+    --bs-pagination-bg: #ffffff;                  /* bg normal */
+    --bs-pagination-border-color: #dee2e6;
+
+    --bs-pagination-hover-color: #ffffff;         /* teks saat hover */
+    --bs-pagination-hover-bg: #6c757d;            /* bg hover */
+    --bs-pagination-hover-border-color: #6c757d;
+
+    --bs-pagination-active-color: #ffffff;        /* teks active */
+    --bs-pagination-active-bg: #6c757d;           /* bg active (hijau) */
+    --bs-pagination-active-border-color: #6c757d;
+
+    --bs-pagination-disabled-color: #6c757d;
+    --bs-pagination-disabled-bg: #ffffff;
+    --bs-pagination-disabled-border-color: #dee2e6;
+
+    /* opsional */
+    --bs-pagination-focus-box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+}

@@ -1,0 +1,32 @@
+@font-face{
+      font-family: 'Quicksand';
+      src: url('../fonts/Quicksand-Light.ttf') format('truetype');
+      font-weight: 300; font-style: normal; font-display: swap;
+    }
+    @font-face{
+      font-family: 'Quicksand';
+      src: url('../fonts/Quicksand-Regular.ttf') format('truetype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face{
+      font-family: 'Quicksand';
+      src: url('../fonts/Quicksand-Medium.ttf') format('truetype');
+      font-weight: 500; font-style: normal; font-display: swap;
+    }
+    @font-face{
+      font-family: 'Quicksand';
+      src: url('../fonts/Quicksand-SemiBold.ttf') format('truetype');
+      font-weight: 600; font-style: normal; font-display: swap;
+    }
+    @font-face{
+      font-family: 'Quicksand';
+      src: url('../fonts/Quicksand-Bold.ttf') format('truetype');
+      font-weight: 700; font-style: normal; font-display: swap;
+    }
+
+     /* Pakai font-nya */
+    :root { --font: 'Quicksand', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; }
+    body { font-family: var(--font); font-weight: 400; line-height: 1.6; }
+    h1,h2,h3 { font-weight: 700; color: rgb(56, 56, 56) !important; }     /* Bold */
+    small, .muted { font-weight: 300; color: rgb(56, 56, 56) !important;} /* Light */
+    strong { font-weight: 600; color: rgb(56, 56, 56) !important;}        /* SemiBold */
