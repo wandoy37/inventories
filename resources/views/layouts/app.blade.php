@@ -25,6 +25,16 @@
     <x-navigation-menu />
     {{ $slot }}
 
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>&copy; {{ date('Y') }} Mulia Group Informatika, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+    <!-- End Footer -->
+
     <!-- Bootstrap JS -->
     <script src="{{ asset('assets') }}/js/bootstrap.bundle.min.js"></script>
     <!-- Jquery JS -->

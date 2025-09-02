@@ -53,7 +53,10 @@
                                                 </ul>
                                         </li>
                                         <li class="nav-item">
-                                                <a class="nav-link" href="#">Akun Bank</a>
+                                                <a class="nav-link" href="{{ route('bank-account.index') }}"
+                                                        wire:navigate wire:current="active">
+                                                        Akun Bank
+                                                </a>
                                         </li>
                                         <li class="nav-item dropdown">
                                                 <button class="nav-link dropdown-toggle" role="button"

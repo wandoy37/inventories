@@ -4,7 +4,7 @@
 }
 
 /* Pagination */
-.pagination-custom {
+.pagination {
     --bs-pagination-color: #6c757d;               /* teks normal */
     --bs-pagination-bg: #ffffff;                  /* bg normal */
     --bs-pagination-border-color: #dee2e6;
