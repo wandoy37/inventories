@@ -44,6 +44,8 @@
     <!-- Flatpicker JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
+    @stack('scripts')
+
     @livewireScripts
 
     <!-- Select2 Example -->

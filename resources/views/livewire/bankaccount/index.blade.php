@@ -25,7 +25,7 @@
                                     <th scope="col" style="width: 5%">No</th>
                                     <th scope="col" style="width: 22%">Nomor Rekening</th>
                                     <th scope="col">Nama Bank</th>
-                                    <th scope="col" style="width: 13%">Aksi</th>
+                                    <th scope="col" style="width: 15%">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody class="text-center">
@@ -39,8 +39,10 @@
                                             class="text-decoration-none text-dark">
                                             <i class="bi bi-pencil"></i> <u>Edit</u>
                                         </a>
-                                        <button class="text-decoration-none text-dark" type="button">
-                                            <i class="bi bi-trash"></i> <u>Hapus</u>
+                                        <button wire:click="delete({{ $ba->id }})"
+                                            wire:confirm="Anda yakin ingin menghapus bank akun ini?"
+                                            class="btn btn-link text-danger">
+                                            <i class="bi bi-trash"></i> <u>Delete</u>
                                         </button>
                                     </td>
                                 </tr>
@@ -59,3 +61,8 @@
             </div>
         </div>
 </section>
+
+@push('scripts')
+{{-- Sweetalert --}}
+@include('sweetalert::alert')
+@endpush

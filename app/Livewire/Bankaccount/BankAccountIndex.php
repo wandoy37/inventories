@@ -7,11 +7,13 @@ use Livewire\Component;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Url;
 use Livewire\WithPagination;
+use Livewire\Attributes\On;
 
 #[Title('Akun Bank')]
 
 class BankAccountIndex extends Component
 {
+    protected $listeners = ['deleteConfirmed' => 'delete'];
 
     use WithPagination;
 
@@ -27,6 +29,7 @@ class BankAccountIndex extends Component
 
     public function render()
     {
+        // Query Search
         $bankAccounts = BankAccount::query()
             ->when($this->search, function ($query) {
                 $query->where('account_name', 'like', '%' . $this->search . '%')
@@ -34,8 +37,18 @@ class BankAccountIndex extends Component
             })
             ->latest()
             ->paginate(10);
+        // End Query Search
+
         return view('livewire.bankaccount.index', [
             'bankAccounts' => $bankAccounts,
         ]);
+    }
+
+    public function delete($id)
+    {
+        $bankAccount = BankAccount::findOrFail($id);
+        $bankAccount->delete();
+        session()->flash('success', 'Akun Bank berhasil diupdate');
+        return $this->redirectRoute('bank-account.index');
     }
 }
