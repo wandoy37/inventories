@@ -18,7 +18,9 @@
                                                         href="{{ route('pengguna.index') }}">Pengguna</a>
                                         </li>
                                         <li class="nav-item">
-                                                <a class="nav-link" href="/daftar-barang.html">Daftar Barang</a>
+                                                <a class="nav-link" wire:navigate wire:current="active"
+                                                        href="{{ route('daftar-barang.index') }}">Daftar
+                                                        Barang</a>
                                         </li>
                                         <li class="nav-item dropdown">
                                                 <button class="nav-link dropdown-toggle" role="button"

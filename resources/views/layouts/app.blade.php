@@ -56,6 +56,14 @@
     </script>
     <!-- End Select2 Example -->
 
+    {{-- Tambahkan script di bawah ini --}}
+    <script>
+        document.addEventListener('livewire:navigated', () => {
+        document.body.classList.remove('modal-open');
+        document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+    });
+    </script>
+
     <!-- Datepicker -->
     <script>
         flatpickr("#flatpickr", {

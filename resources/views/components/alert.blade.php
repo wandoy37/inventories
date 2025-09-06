@@ -14,7 +14,15 @@ $clases = 'alert-danger';
 $key = 'errors';
 $icon = 'bi bi-exclamation-circle me-2';
 }
+
+if (session('warning')) {
+$clases = 'alert-warning';
+$key = 'warning';
+$icon = 'bi bi-info-circle me-2';
+}
 @endphp
+
+
 
 @if ($key && session($key))
 <div class="row">
