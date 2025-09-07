@@ -21,4 +21,7 @@ Route::get('/daftar-barang/create', \App\Livewire\Items\ItemCreate::class)->name
 Route::get('/daftar-barang/{item}', \App\Livewire\Items\ItemShow::class)->name('daftar-barang.show');
 Route::get('/daftar-barang/edit/{item}', \App\Livewire\Items\ItemEdit::class)->name('daftar-barang.edit');
 
-
+// Data Vendor/Supplier
+Route::get('/daftar-vendor', \App\Livewire\Vendor\VendorIndex::class)->name('daftar-vendor.index');
+Route::get('/daftar-vendor/create', \App\Livewire\Vendor\VendorCreate::class)->name('daftar-vendor.create');
+Route::get('/daftar-vendor/edit/{vendor}', \App\Livewire\Vendor\VendorEdit::class)->name('daftar-vendor.edit');

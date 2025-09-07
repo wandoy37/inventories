@@ -23,12 +23,12 @@
                                                         Barang</a>
                                         </li>
                                         <li class="nav-item dropdown">
-                                                <button class="nav-link dropdown-toggle" role="button"
+                                                <a class="nav-link dropdown-toggle {{ request()->routeIs('daftar-vendor.*') ? 'active' : '' }}" wire:navigate wire:current="active" role="button"
                                                         data-bs-toggle="dropdown"
-                                                        aria-expanded="false">Pembelian</button>
+                                                        aria-expanded="false">Pembelian</a>
                                                 <ul class="dropdown-menu">
                                                         <li>
-                                                                <a class="dropdown-item" href="#">Data Vendor</a>
+                                                                <a class="dropdown-item" href="{{route('daftar-vendor.index')}}">Data Vendor</a>
                                                         </li>
                                                         <li>
                                                                 <a class="dropdown-item" href="#">Stock Opname</a>
