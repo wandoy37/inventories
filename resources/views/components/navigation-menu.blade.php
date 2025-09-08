@@ -98,3 +98,21 @@
         </nav>
 </section>
 <!-- End Navbar -->
+
+@push('scripts')
+    <script>
+        document.querySelectorAll('.nav-item.dropdown').forEach(function (dropdown) {
+                dropdown.addEventListener('mouseenter', function () {
+                        let toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+                        let menu = new bootstrap.Dropdown(toggle);
+                        menu.show();
+                });
+
+                dropdown.addEventListener('mouseleave', function () {
+                        let toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+                        let menu = bootstrap.Dropdown.getInstance(toggle);
+                        menu.hide();
+                });
+        });
+    </script>
+@endpush
