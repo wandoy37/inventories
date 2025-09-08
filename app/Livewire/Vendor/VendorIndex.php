@@ -45,6 +45,9 @@ class VendorIndex extends Component
     public function delete($id)
     {
         $vendor = Vendor::findOrFail($id);
+        foreach ($vendor->rekenings as $rekening) {
+            $rekening->delete();
+        }
         $vendor->delete();
         session()->flash('warning', 'Data Vendor ' . $vendor->name . ' berhasil dihapus');
         return $this->redirectRoute('daftar-vendor.index');

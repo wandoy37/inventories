@@ -51,7 +51,56 @@
                     </div>
                 </div>
             </div>
+            {{-- Form Create New Rekening --}}
+            <div class="col-lg-6">
+                <x-form-add-rekening-vendor/>
+            </div>
+            {{-- End Form Create New Rekening --}}
         </div>
         {{-- End Form Create --}}
+
+        {{-- Daftar Rekening Vendor --}}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead class="text-center">
+                                <tr>
+                                    <th scope="col" style="width: 5%">No</th>
+                                    <th scope="col" style="width: 30%">Nama Bank</th>
+                                    <th scope="col">Nomor Rekening</th>
+                                    <th scope="col" style="width: 15%">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                @forelse ($vendor->rekenings as $vr)
+                                    <tr wire:key="ba-{{ $vr->id }}">
+                                        <th scope="row">{{ $loop->iteration }}</th>
+                                        <td>{{ $vr->bank_name }}</td>
+                                        <td>{{ $vr->rekening_number }}</td>
+                                        <td class="d-flex justify-content-between">
+                                            <button
+                                                wire:click="delete({{ $vr->id }})"
+                                                wire:confirm="Anda yakin ingin menghapus rekening vendor ini?"
+                                                class="btn btn-danger btn-sm">
+                                                <i class="bi bi-trash me-1"></i> Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="6" class="text-center text-muted">Tidak ada data</td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- End Daftar Rekening Vendor --}}
+
+        
     </div>
 </section>
