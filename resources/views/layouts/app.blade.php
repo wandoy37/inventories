@@ -24,7 +24,9 @@
     @livewireStyles
 </head>
 <body>
-    <x-navigation-menu />
+    @if (!Request::is('login'))
+        <x-navigation-menu />
+    @endif
     {{ $slot }}
 
     <!-- Footer -->

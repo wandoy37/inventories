@@ -84,12 +84,15 @@
                                         <div class="dropdown">
                                                 <button href="http://" class="dropdown-toggle nav-link"
                                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <u class="fw-bold">Username</u>
+                                                        <u class="fw-bold">{{ Auth::user()->username }}</u>
                                                 </button>
                                                 <ul class="dropdown-menu">
                                                         <li><a class="dropdown-item" href="/profile">Profile</a></li>
                                                         <hr />
-                                                        <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                                                        <form action="/logout" method="POST" style="display:inline;">
+                                                                @csrf
+                                                                <button type="submit" class="dropdown-item">Logout</button>
+                                                        </form>
                                                 </ul>
                                         </div>
                                 </div>
